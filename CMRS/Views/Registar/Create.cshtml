@@ -1,0 +1,42 @@
+﻿@model CMRS.Models.Medijator
+
+@{
+	ViewData["Title"] = "Registar - Centar za mirovno rješavanje sporova";
+}
+
+<h3>Create</h3>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+<form asp-action="Create" method="post">
+	<div class="form-group">
+		<label for="Id">Id</label>
+		<input type="hidden" asp-for="Id" />
+	</div>
+	<div class="form-group">
+		<label for="Name">Name</label>
+		<input type="text" class="form-control" asp-for="Ime" />
+	</div>
+	<div class="form-group">
+		<label for="Prezime">Prezime</label>
+		<input type="text" class="form-control" asp-for="Prezime" />
+	</div>
+	<div class="form-group">
+		<label for="Prebivaliste">Prebivaliste</label>
+		<input type="text" class="form-control" asp-for="Prebivaliste" />
+	</div>
+	<div class="form-group">
+		<label for="Email">Email</label>
+		<input type="email" class="form-control" asp-for="Email" />
+	</div>
+	<div class="form-group">
+		<label for="Telefon">Telefon</label>
+		<input type="text" class="form-control" asp-for="Telefon" />
+	</div>
+	<div class="form-group">
+		<label for="Aktivan">Aktivan</label>
+		<input type="checkbox" class="form-control" asp-for="Aktivan" />
+	</div>
+	<button type="submit" class="btn btn-primary">Create</button>
+</form>

@@ -1,0 +1,35 @@
+﻿@model List<CMRS.Models.Medijator>
+
+@{
+	ViewData["Title"] = "Registar medijatora - Centar za mirovno rješavanje sporova";
+}
+
+<table class="table">
+	<thead>
+		<tr>
+			<th colspan="6" class="table-title">Pregled medijatora</th>
+		</tr>
+		<tr>
+			<th>Registarski<br />broj upisa</th>
+			<th>Ime i prezime podnositelja zahtjeva</th>
+			<th>Prebivalište podnositelja zahtjeva	</th>
+			<th>Email</th>
+			<th>Mobitel</th>
+			<th>Aktivan</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var medijator in Model)
+		{
+			<tr>
+				<td>@medijator.Id</td>
+				<td>@medijator.Ime @medijator.Prezime</td>
+				<td>@medijator.Prebivaliste</td>
+				<td>@medijator.Email</td>
+				<td>@medijator.Telefon</td>
+				<td>@medijator.Aktivan</td>
+			</tr>
+		}
+	</tbody>
+</table>
+

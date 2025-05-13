@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Centar za mirovno rješavanje sporova</title>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CMRS.styles.css" asp-append-version="true" />
+    <style>
+        .navbar-nav .nav-link {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="kontakt-bar">
+            <span>Email: info@cmrs.hr</span>
+            <span>Telefon: 01/0000-000</span>
+        </div>
+        <div class="linija">
+        </div>
+        <nav class="navbar navbar-expand-lg" style="margin:auto: transparent; border-bottom: none; box-shadow: none;">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="~/images/logo.png" alt="CMRS Logo" style="height: 80px; margin-left: 100px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index">Naslovna</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Home" asp-action="Onama">O nama</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kako postati medijator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Medijator" asp-action="Registar">Registar medijatora</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Medijator" asp-action="Registar">Registar institucija</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dokumenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - CMRS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
