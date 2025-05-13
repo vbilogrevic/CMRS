@@ -13,13 +13,18 @@ namespace CMRS.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Medijatori()
         {
             var medijator = await _context.Medijatori.ToListAsync();
             return View(medijator);
         }
 
         public IActionResult Create()
+        {
+            return View();
+        }
+
+        public IActionResult Institucije()
         {
             return View();
         }

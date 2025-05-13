@@ -23,7 +23,17 @@ namespace CMRS.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult KakoPostatiMedijator()
+        {
+            return View();
+        }
+
+        public IActionResult Dokumenti()
+        {
+            return View();
+        }
+
+        public IActionResult Kontakt()
         {
             return View();
         }

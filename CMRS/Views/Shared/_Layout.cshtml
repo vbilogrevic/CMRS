@@ -12,6 +12,11 @@
         .navbar-nav .nav-link {
             margin-right: 20px;
         }
+        .footer {
+            background-color: #0F4C75;
+            color: #fff;
+            padding: 40px 0;
+        }
     </style>
 </head>
 <body>
@@ -43,19 +48,19 @@
                             <a class="nav-link" asp-controller="Home" asp-action="Onama">O nama</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kako postati medijator</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="KakoPostatiMedijator">Kako postati medijator</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Medijator" asp-action="Registar">Registar medijatora</a>
+                            <a class="nav-link" asp-controller="Registar" asp-action="Medijatori">Registar medijatora</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Medijator" asp-action="Registar">Registar institucija</a>
+                            <a class="nav-link" asp-controller="Registar" asp-action="Institucije">Registar institucija</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Dokumenti</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Dokumenti">Dokumenti</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Kontakt</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Kontakt">Kontakt</a>
                         </li>
                     </ul>
                 </div>
